@@ -71,5 +71,59 @@ public class ControlApartados {
    
    public Sala getSala(int celda){
       return salas[celda];
-   }   
-}
+   }
+// Metodos Apartados
+   public int getNumApartado(int numApartado) {
+      return numApartado++;
+   }
+   
+   public Apartado getApartado(int celda) {
+      return apartados[celda];
+   }
+   
+   public int busquedaA(int numApartado){
+      for(int x=0;x<contA;x++){
+         if(apartados[x].getNumApartado() == numApartado) {
+            return x;
+         }
+      }
+      return -1;
+   }
+   
+   public void agregar(Apartado a) {
+      apartados[contA] = a;
+      contA++;
+   }
+   
+   public int busquedaF(String fecha){
+      for(int x=0;x<contA;x++){
+         if(apartados[x].getFecha().equals(fecha)) {
+             return x;
+         } 
+      }
+      return -1;
+   }
+   
+   public int busquedaH(String hora) {
+       for(int x=0; x<contA; x++) {
+           if(apartados[x].getHora().equals(hora)) {
+               return x;
+           }
+       }
+       return -1;
+   }
+   
+   public int busquedaRepertida(int idSala) {
+       for (int x=0; x<contA; x++) {
+           if (getContA() > 0) {
+               if(apartados[x].getIdSala() == idSala) {
+                   return x;
+               }
+           } else {
+               return x;
+           }
+       }
+        return -1;
+   }
+}   
+

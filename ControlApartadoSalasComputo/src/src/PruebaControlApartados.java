@@ -31,8 +31,10 @@ public class PruebaControlApartados {
                  menuMaestro(ca);
                  break;
              case 2:
+                 menuSalas(ca);
                  break;
              case 3:
+                 menuApartado(ca);
                  break;
              case 4: break;
              default:
@@ -123,7 +125,9 @@ public class PruebaControlApartados {
                 case 3: 
                            
                     break;
-                case 4: break;
+                case 4: 
+                    
+                    break;
                 default:
                     System.out.print("Opcion no valida... Presione ENTER para continuar");
                     limpiarPausar();
@@ -265,5 +269,21 @@ public class PruebaControlApartados {
          limpiarPausar();
       }
    }
-//   Apartados
+//   Apartados 
+   private static void realizarApartado(ControlApartados ca){
+       
+       if(ca.getContS() > 0){
+           if(ca.getContM() > 0){
+               System.out.println("\nREGISTRAR APARTADO");
+               
+               System.out.print("Numero de apartado: ");
+           } else {
+               System.out.print("No se a registrado ningun maestro aun... Presione ENTER para continuar");
+               limpiarPausar();
+           }
+       } else {
+           System.out.print("No se a registrado ninguna sala aun... Presione ENTER para continuar");
+           limpiarPausar();
+       }
+   }
 }

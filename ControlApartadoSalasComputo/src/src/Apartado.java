@@ -15,8 +15,7 @@ public class Apartado {
     private String fecha;
     private String hora;
 
-    public Apartado(int numApartado, int idMaestro, int idSala, String fecha, String hora) {
-        this.numApartado = numApartado;
+    public Apartado(int idMaestro, int idSala, String fecha, String hora) {
         this.idMaestro = idMaestro;
         this.idSala = idSala;
         this.fecha = fecha;
